@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+        <!-- favicon -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANd3MAN3JNQCX3TUAXFxcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREQzMzNERBMzMzAAAxFEEwAAMCIDEUQTAiACIDMRRBMCICIDMRFEEwIiIDMREUQTAiIgMxERRBMCISIDMRFEEwIhEiAxEUQTAiESIDERRBMCIRIgMRFEEwIhIiAxEUQTAiIiAzERRBMCIiAzERFEEwAAAzEREURDMzMzREREQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rel="icon" type="image/x-icon" />
+        <!-- javascript -->
+    <script src="main.js" defer></script>
+        <!-- hamburguer menu -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Rick and Morty</title>
+</head>
+<body>
+    <header>
+        <form class="search_form">
+            <input 
+            type="text" 
+            name="search" 
+            id="search__caracter" 
+            placeholder="search here by id">
+            <input type="submit" value="Send" id="send">
+        </form>
+        <nav class="nav__menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact me</a></li>
+                <li><a href="#">support</a></li>
+            </ul>
+        </nav>
+        <div id="menu__hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="first__section">
+        <div class="character__conteiner">
+            <div>
+                <img class="rickandmorty__img" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+            </div>
+            <div class="status__character">
+                <span class="characterId">1</span>
+                <h1 class="name__character">Rick Sanchez</h1>
+                <div class="information__character">
+                    <ul>
+                        <li>Gender :<p class="gender">Male</p></li>
+                        <li>Status :<p class="status">Alive</p></li>
+                        <li>Species :<p class="species">Human</p></li>
+                        <li>Episode :<p class="episode">51</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
