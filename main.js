@@ -1,7 +1,6 @@
-// input search character
+// input search character | input button
 const searchCharacter = document.querySelector('#search__caracter');
 
-// input
 const send = document.querySelector('#send');
 
 // Name character
@@ -48,17 +47,19 @@ hamburguerMenu.addEventListener("click", () => {
 
 // API conversion
 const url = async (character) => {
-    const result = fetch(`https://rickandmortyapi.com/api/character/${character}`)
+    const result = await fetch(`https://rickandmortyapi.com/api/character/${character}`)
     .then((res) => res.json())
     .then((data) => {
         showCharacter(data)
-        return data;
+       // return data;
+    }).catch(err => {
+        console.log(err)
     })
 };
 
 // get input value
-send.addEventListener("click", (sendSearch) => {
-    sendSearch.preventDefault();
+send.addEventListener("click", (e) => {
+    e.preventDefault();
     const value = url(searchCharacter.value);
 })
 
@@ -71,4 +72,4 @@ const showCharacter = (data) => {
     status.innerHTML = data.status
     species.innerHTML = data.species
     episode.innerHTML = data.episode.length
-}
+};

@@ -1,0 +1,208 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    /*
+    background-image: linear-gradient(to bottom, rgb(65, 240, 65), lightgreen);
+    */
+    background-color: #272b33;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+header > nav > ul {
+    display: flex;
+    gap: 10vh;
+    list-style: none;
+}
+
+header > nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+
+header > nav > ul > li > a:hover {
+    background-color: rgb(13, 203, 6);
+}
+
+#menu__hamburguer {
+    display: none;
+}
+
+#search__caracter {
+    width: 40vh;
+    margin: 10px;
+}
+
+#search__caracter, #send {
+    padding: 5px;
+    outline: none;
+}
+
+#send {
+    border-radius: 4px;
+    border: none;
+    width: 60px;
+    cursor: pointer;
+}
+
+.first__section {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+}
+
+.character__conteiner {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    height: 50vh;
+    margin: auto;
+}
+
+.rickandmorty__img {
+    border: 1px solid black;
+    height: 50vh;
+}
+
+.status__character {
+    display: flex;
+    color: black;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #3C3E44;
+    color: white;
+}
+
+.characterId {
+    font-size: 26px;
+    padding: 5px;
+}
+
+.information__character > ul {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+}
+
+.information__character > ul > li {
+    display: flex;
+    gap: 4px;
+    color: white;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px){
+
+    header {
+        display: block;
+        position: relative;
+    }
+
+
+    header > nav {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        background-color: #080808;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.9;
+        left: -100vw;
+        transition: 0.5s;
+    }
+
+    .search_form {
+        display: block;
+        position: absolute;
+    }
+
+    header > nav > ul {
+        display: block;
+    }
+
+    header > nav > ul > li {
+        padding: 20px;
+    }
+
+    header > nav > ul > li > a {
+        display: block;
+        color: white;
+    }
+
+    header > nav > ul > li > a:hover {
+        background-color: #dcdbdbcb;
+    }
+
+    #menu__hamburguer {
+        display: block;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    #menu__hamburguer > span {
+        display: block;
+        height: 3px;
+        margin: 5px;
+        width: 20px;
+        background-color: white;
+        margin-bottom: 5px;
+        transform-origin: center; 
+        transition: 0.2s;
+    }
+
+    #menu__hamburguer.active > span:nth-child(1) {
+        transform: translateY(12px) rotate(-45deg);
+    }
+
+    #menu__hamburguer.active > span:nth-child(2) {
+        opacity: 0;;
+    }
+
+    #menu__hamburguer.active > span:nth-child(3) {
+        transform: translateY(-4px) rotate(45deg);
+    }
+
+    .character__conteiner {
+        margin-top: 2%;
+        display: block;
+        border: 1px solid black;
+    }
+
+    .status__character {
+        color: white;
+        margin-top: -4px;
+        padding-top: 10px;
+        border: none;
+        height: 37vh;
+    }
+
+    .rickandmorty__img {
+        margin-bottom: 0;
+        border: none;
+    }
+
+    .information__character > ul {
+        margin-top: 20px;
+    }
+
+}
