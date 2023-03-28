@@ -29,7 +29,6 @@ function showMenu() {
     }
 }
 
-
 const searchForm = document.querySelector('.search_form');
 function closemenu() {
     if (searchForm.style.display == "none") {
@@ -51,7 +50,7 @@ const url = async (character) => {
     .then((res) => res.json())
     .then((data) => {
         showCharacter(data)
-       // return data;
+        return data;
     }).catch(err => {
         console.log(err)
     })
