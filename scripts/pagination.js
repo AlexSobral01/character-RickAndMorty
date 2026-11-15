@@ -1,3 +1,5 @@
+import { showCharacter } from "./showCharacter.js";
+
 let characters = [];
 const container = document.querySelector('#section');
 const page = document.querySelector('#currentPage');
@@ -15,7 +17,14 @@ const pagination = (data) => {
     data.forEach((character) => {
         const card = document.createElement('div');
    
+        card.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+            showCharacter(character)
 
+        })
         card.innerHTML = `
             <p class="${character.status}">◉ ${character.status}</p>
         `
