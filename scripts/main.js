@@ -1,3 +1,6 @@
+import './pagination.js';
+import { url } from './api.js'
+
 // input search character | input button
 const searchCharacter = document.querySelector('#search__caracter');
 
@@ -45,22 +48,14 @@ hamburguerMenu.addEventListener("click", () => {
     showMenu()
 })
 
-// API conversion
-const url = async (character) => {
-    const result = await fetch(`https://rickandmortyapi.com/api/character/${character}`)
-    .then((res) => res.json())
-    .then((data) => {
-        showCharacter(data)
-        return data;
-    }).catch(err => {
-        console.log(err)
-    })
-};
-
-// get input value
-send.addEventListener("click", (e) => {
+// get input and set value
+send.addEventListener("click", async(e) => {
     e.preventDefault();
-    const value = url(searchCharacter.value);
+    const value = await url(searchCharacter.value);
+
+    if (value) {
+        showCharacter(value)
+    }
 })
 
 // Push value into html

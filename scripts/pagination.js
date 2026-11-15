@@ -84,7 +84,6 @@ const results = async () => {
         }
     }
 
-    console.log('registo antes')
     prevButton.addEventListener('click', prevPage);
     nextButton.addEventListener('click', nextPage);
 
