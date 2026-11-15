@@ -1,23 +1,11 @@
 import './pagination.js';
 import { url } from './api.js'
+import { showCharacter } from './showCharacter.js';
 
 // input search character | input button
 const searchCharacter = document.querySelector('#search__caracter');
 
 const send = document.querySelector('#send');
-
-// Name character
-const characterName = document.querySelector('.name__character');
-
-// character information
-const characterId = document.querySelector('.characterId');
-const gender = document.querySelector('.gender');
-const status = document.querySelector('.status');
-const species = document.querySelector('.species');
-const episode = document.querySelector('.episode');
-
-// photo character
-const rickandmorty__img = document.querySelector('.rickandmorty__img');
 
 // hamburguer menu
 const hamburguerMenu = document.querySelector('#menu__hamburguer');
@@ -57,14 +45,3 @@ send.addEventListener("click", async(e) => {
         showCharacter(value)
     }
 })
-
-// Push value into html
-const showCharacter = (data) => {
-    characterName.innerHTML = data.name;
-    characterId.innerHTML = data.id;
-    rickandmorty__img.src = data.image
-    gender.innerHTML = data.gender
-    status.innerHTML = data.status
-    species.innerHTML = data.species
-    episode.innerHTML = data.episode.length
-};
