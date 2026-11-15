@@ -1,0 +1,95 @@
+#section {
+    margin: 60px;
+    margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+#section div {
+    padding: 5px;
+    width: 200px;
+    background-color: #3C3E44;
+    color: white;
+    border-radius: 4px;
+}
+
+#section div:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
+#section img {
+    width: 190px;
+}
+
+.character-image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.character-image.loaded {
+    opacity: 1;
+}
+
+#section h2 {
+    font-size: 16px;
+    color: white;
+}
+
+
+/* status */
+
+.Alive {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(13, 203, 6);
+}
+
+.Dead {
+    font-size: 10px;
+    font-weight: bold;
+    color: red;
+}
+
+.unknown {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(171, 170, 170);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #3C3E44;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.pagination button:hover {
+    background-color: green;
+}
+
+.pagination button:disabled {
+    opacity: 0,5;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(13, 203, 6);
+    color: white;
+    border-radius: 6px;
+}
